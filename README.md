@@ -1,46 +1,53 @@
-# Contributing to StellarModManager
+# Dépôt de mods TF (custom)
 
-Thank you for your interest in contributing to the StellarModManager! If you wish to add your mod to the database follow the steps below.
+**Ce n'est pas le dépôt officiel de StellarModManager.** C'est un dépôt privé entre potes : il ne liste que les mods de [tidic84](https://github.com/tidic84) et de [Romalaure](https://github.com/Romalaure).
 
-## Adding a New Mod
+Les mods officiels restent disponibles dans l'app, ils viennent du dépôt officiel ([voxar.dev/mods.json](https://voxar.dev/mods.json)).
 
-To add your mod to the repository, please follow these steps:
+## Utilisation
 
-1. **Fork this repository** to your own GitHub account.
-2. **Add your mod entry** to the `mods.json` file.
-3. **Ensure your mod zip follows the required structure** (see below).
-4. **Open a Pull Request** against the main branch.
+- **TFStellarModManager** : ce dépôt est déjà configuré par défaut, il n'y a rien à faire.
+- **StellarModManager (avec dépôts personnalisés)** : *Paramètres → Dépôts personnalisés*, ajouter
+  `https://github.com/tidic84/StellarModRepository`
 
----
+## Mods
 
-### 📦 Mod Package Requirements
+| Mod | Auteur |
+| --- | --- |
+| [Arsenal](https://github.com/tidic84/StellarDrive-Arsenal) | tidic84 |
+| [World Backups](https://github.com/tidic84/StellarDrive-WorldBackups) | tidic84 |
+| [Custom Seat](https://github.com/tidic84/StellarDrive-CustomSeat) | tidic84 |
+| [StellarDrive Demo TF](https://github.com/Romalaure/StellarDrive-demo-TF) | Romalaure |
+| [StellarDrive Demo TF Advanced](https://github.com/Romalaure/StellarDrive-demo-TF-advanced) | Romalaure |
 
-For a mod to be compatible with StellarModManager, your `.zip` file **must** maintain the following structure at its root. 
+## Ajouter un mod
 
-If these requirements are not met, the Mod Manager will not be able to load your mod correctly.
+1. Le dépôt du mod doit être **public** sur GitHub, branche `main`.
+2. Il contient un `mod.json` (ici dans le dossier `Mods/`) :
+   ```json
+   {
+     "id": "mon_mod",
+     "name": "Mon Mod",
+     "author": "Pseudo",
+     "version": "1.0.0",
+     "description": "Ce que fait le mod.",
+     "thumbnail": "Thumbnail.png",
+     "images": []
+   }
+   ```
+3. Chaque version est une **release GitHub** avec le tag `v<version>` (ex. `v1.0.0`, identique à `version` dans `mod.json`) contenant un zip nommé exactement `<nom-du-dépôt>.zip`, structuré ainsi :
+   ```text
+   <nom-du-dépôt>.zip
+   ├── mod.json
+   ├── Mods/       <-- les .dll du mod
+   └── Plugins/    <-- optionnel
+   ```
+4. Ajouter une ligne dans `mods.json` :
+   ```json
+   { "author": "Pseudo", "repo": "nom-du-dépôt", "metadata": "Mods" }
+   ```
+   (`metadata` = dossier où se trouve `mod.json` dans le dépôt du mod, vide s'il est à la racine.)
 
-#### Required Folder Structure
+## Publier une mise à jour
 
-```text
-YourMod.zip
-├── mod.json       <-- Metadata file
-├── Mods/          <-- Folder containing the mod's .dll files
-└── Plugins/       <-- Folder containing plugin files (if you need some)
-
-```
-
-The metadata file contains information about your mod that StellarModManager uses to identify, load, and display it.
- 
-#### Metadata Format
-
-The file must contain valid JSON using the following structure:
-
-```json
-{
-  "id": "jolly_decorations",
-  "name": "Jolly's Decorations",
-  "author": "Jollyname",
-  "version": "1.0.0",
-  "description": "Adds decorative parts to the game."
-}
-```
+Augmenter `version` dans `mod.json`, puis publier la release `v<nouvelle version>` avec le zip. L'app la propose dans *Mises à jour*.
