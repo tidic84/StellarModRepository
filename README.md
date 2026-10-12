@@ -17,6 +17,10 @@ Les mods officiels restent disponibles dans l'app, ils viennent du dépôt offic
 | [Arsenal](https://github.com/tidic84/StellarDrive-Arsenal) | tidic84 |
 | [World Backups](https://github.com/tidic84/StellarDrive-WorldBackups) | tidic84 |
 | [Custom Seat](https://github.com/tidic84/StellarDrive-CustomSeat) | tidic84 |
+| [StellarAnchor](https://github.com/tidic84/StellarDrive-StellarAnchor) | tidic84 |
+| [StellarBuild](https://github.com/tidic84/StellarDrive-StellarBuild) | tidic84 |
+| [StellarFactory](https://github.com/tidic84/StellarDrive-StellarFactory) (nécessite StellarBuild) | tidic84 |
+| [StellarLogistics](https://github.com/tidic84/StellarDrive-StellarLogistics) (nécessite StellarBuild et StellarFactory) | tidic84 |
 | [StellarDrive Demo TF](https://github.com/Romalaure/StellarDrive-demo-TF) | Romalaure |
 | [StellarDrive Demo TF Advanced](https://github.com/Romalaure/StellarDrive-demo-TF-advanced) | Romalaure |
 
