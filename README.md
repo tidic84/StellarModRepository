@@ -21,6 +21,7 @@ Les mods officiels restent disponibles dans l'app, ils viennent du dépôt offic
 | [StellarBuild](https://github.com/tidic84/StellarDrive-StellarBuild) | tidic84 |
 | [StellarFactory](https://github.com/tidic84/StellarDrive-StellarFactory) (nécessite StellarBuild) | tidic84 |
 | [StellarLogistics](https://github.com/tidic84/StellarDrive-StellarLogistics) (nécessite StellarBuild et StellarFactory) | tidic84 |
+| [StellarRooms](https://github.com/tidic84/StellarDrive-StellarRooms) (plus de freeze en construisant les gros vaisseaux) | tidic84 |
 | [StellarDrive Demo TF](https://github.com/Romalaure/StellarDrive-demo-TF) | Romalaure |
 | [StellarDrive Demo TF Advanced](https://github.com/Romalaure/StellarDrive-demo-TF-advanced) | Romalaure |
 
